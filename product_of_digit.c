@@ -2,17 +2,15 @@
 
 int main(){
 // write a prog to find the product of the digit in a number;
-int num=100;
-int lastDigit=1;
-    while (num!=0)
-    {
-        int remainder=num%10 ;//to find the last digit of the number
-        lastDigit=lastDigit*remainder;
-        num=num/10; // reducing num size by one
-    }
-    printf("%d",lastDigit);
-
-
-
+int num;
+printf("enter the number: ");
+scanf("%d",&num);
+int lastdigit=1;
+while (num!=0)
+{
+    lastdigit=lastdigit*(num%10);
+    num=num/10;
+}
+    printf("product of digit = %d ",lastdigit);
     return 0;
 }
